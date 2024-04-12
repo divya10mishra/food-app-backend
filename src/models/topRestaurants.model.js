@@ -1,28 +1,31 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const topRestaurantsSchema = mongoose.Schema({
-imgUrl:{
-    type:String
-},
-restaurantName:{
-    type:String
-},
-restaurantAddress:{
-    type:String
-},
-cuisines:{
-    type:Array
-},
-avgRating:{
-    type:String
-},
-discount:{
-    type:String
-},
-restaurantId:{
-    type:String
-}
-})
+  imgUrl: {
+    type: String,
+  },
+  restaurantName: {
+    type: String,
+  },
+  restaurantAddress: {
+    type: String,
+  },
+  cuisines: {
+    type: [String],
+  },
+  avgRating: {
+    type: String,
+  },
+  discount: {
+    type: String,
+  },
+  restaurantId: {
+    type: String,
+  },
+});
 
-const topRestaurants =  mongoose.model("top_restaurants", topRestaurantsSchema)
-module.exports = topRestaurants
+module.exports = mongoose.model(
+  "topRestaurants",
+  topRestaurantsSchema,
+  "top_restaurants"
+);

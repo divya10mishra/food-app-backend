@@ -1,14 +1,10 @@
-// src/app.js
+// Load environment variables from .env file if using dotenv
+require("dotenv").config();
 const express = require("express");
 const errorHandler = require("./src/middleware/errorHandler");
-const route = require('./src/routes/restaurants.route')
-const mongo = require('./src/database/mongo')
-
-// Load environment variables from .env file if using dotenv
-require('dotenv').config();
+const route = require("./src/routes/restaurants.route");
 
 const app = express();
-
 
 // Apply middleware, if any
 app.use(express.json()); // Body parser middleware
@@ -21,24 +17,17 @@ app.get("/", (req, res) => {
   res.send("This is the root path");
 });
 
-
 //start express server
 
-async function startServer(){
-  try{
-
-    //connect to mongodb
-    await mongo.connect()
-
-    //start express server
+async function startServer() {
+  try {
     const PORT = process.env.PORT || 3000;
-    app.listen(PORT,()=>{
-      console.log(`Server is running on port : ${PORT}`)
-    })
-
-  }catch(err){
-    console.error("error in starting server",err)
+    app.listen(PORT, () => {
+      console.log(`Server is running on port : ${PORT}`);
+    });
+  } catch (err) {
+    console.error("error in starting server", err);
   }
 }
 
-startServer()
+startServer();
