@@ -2,6 +2,7 @@ const restaurantVarietiesModel = require("../models/restaurantVarieties.model");
 const topRestaurantsModel = require("../models/topRestaurants.model");
 const mongo = require("../database/mongo");
 const restaurantMenuModel = require("../models/restaurantMenu.model");
+const menuJson = require('../../api/restaurantMenu.json')
 
 exports.getTopRestaurants = async (req, res) => {
   try {
@@ -37,9 +38,9 @@ exports.getRestaurantMenu = async(req,res) => {
   try{
     await mongo.connect()
     console.log("connection done!")
-    const menu = await restaurantMenuModel.find({})
+    const menu = await restaurantMenuModel.create(menuJson)
     console.log(menu,"menu")
-    res.status(200).json(menu)
+    res.status(200).json("success")
   }catch(err){
     console.error("Error in fetching",err)
     res.status(500).json({err:"internal server error"})

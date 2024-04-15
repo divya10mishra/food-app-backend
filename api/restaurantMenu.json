@@ -1,0 +1,27 @@
+[
+  {
+    "dishName": "Crispy Veg Burger+Fries(M)",
+    "vegetarian": "true",
+    "price": "160",
+    "offer": "60% OFF USE STEALDEAL",
+    "rating": "4.5",
+    "description": "Crispy Veg Burger+Fries(M) Qty: 251 Gms| Kcal: 694.7 | Carbs 498.8 Gms| Sugar: 6.5 Gms| Fat: 27.2 Gms| Saturated fat: 11.7 Gms| Protein: 14.3 Gms| Sodium: 3281.6 Mg Contains: Gluten, Soybean, Milk, Sesame seeds"
+    
+  },
+  {
+    "dishName": "Crispy Veg Double Patty Burger+Fries(M)",
+    "vegetarian": "true",
+    "price": "189",
+    "offer": "60% OFF USE STEALDEAL",
+    "rating": "4.5",
+    "description": "Crispy Veg Double Patty Burger+Fries(M) Qty: 318 Gms| Kcal: 863.9 | Carbs 516 Gms| Sugar: 9.1 Gms| Fat: 37.1 Gms| Saturated fat: 16 Gms| Protein: 17.1 Gms| Sodium: 1596.8 Mg Contains: Gluten, Soybean, Milk, Sesame seeds"
+  },
+  {
+    "dishName": "Crispy Chicken Double Patty Burger+Fries(M)",
+    "vegetarian": "false",
+    "price": "229",
+    "offer": "60% OFF USE STEALDEAL",
+    "rating": "4",
+    "description": "Crispy Chicken Double Patty Burger+Fries(M) Qty: 296 Gms| Kcal: 867.6 | Carbs 498.1 Gms| Sugar: 10.2 Gms| Fat: 42.7 Gms| Saturated fat: 17.2 Gms| Protein: 23.3 Gms| Sodium: 1415.9 Mg Contains: Gluten, Soybean, Milk, Sesame seeds"
+  }
+]

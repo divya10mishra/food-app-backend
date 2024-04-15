@@ -1,17 +1,20 @@
 const mongoose = require('mongoose')
 
 const restaurantMenuSchema = mongoose.Schema({
-   menuVariety:{
+   dishName:{
     type:String,
     required:true
    },
    vegetarian:{
     type:Boolean,
-    required:true
+    required:true,
+    lowercase:true
    },
    price:{
     type:Number,
-    required:true
+    required:true,
+    min:99,
+    max:1000
    },
    offer:{
     type:String,
@@ -21,10 +24,19 @@ const restaurantMenuSchema = mongoose.Schema({
     type:String,
     required:false
    },
-   cuisines:{
-    type:Array,
+   description:{
+    type:String,
     required:false
+   },
+   createdAt:{
+      type: Date,
+      immutable:true,
+      default: () => Date.now()
+   },
+   updatedAt:{
+      type:Date,
+      default: () => Date.now()
    }
 })
 
-module.exports = mongoose.model("restaurantMenu", restaurantMenuSchema, "restaurant_menu")
+module.exports = mongoose.model( "restaurant_menu", restaurantMenuSchema)

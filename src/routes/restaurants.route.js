@@ -10,6 +10,11 @@ router.get(
   RestaurantsController.getRestaurantVarieties
 );
 
+router.get(
+  "/getRestaurantMenu", 
+  RestaurantsController.getRestaurantMenu
+  );
+
 router.post(
   "/addRestaurantVarieties",
   RestaurantsController.addRestaurantVarieties
